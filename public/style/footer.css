@@ -1,0 +1,25 @@
+.containerFooter {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 20px 0;
+    gap: 15px;
+}
+
+.containerFooter a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.containerFooter a:hover {
+    color: #2b55ff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}

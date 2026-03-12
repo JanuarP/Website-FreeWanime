@@ -1,0 +1,72 @@
+<%- include("partials/header.ejs") %>
+
+<style>
+    .categorySection {
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    .categorySection h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .category-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .category-card {
+        background: #1a1a1a;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px #ffffff;
+    }
+
+    .category-card a {
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+
+    .category-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .category-card h3 {
+        padding: 15px;
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+        color: #ffffff;
+    }
+</style>
+
+<section class="categorySection">
+    <h2>Anime Categories</h2>
+    <div class="category-list">
+        <% if (categories && categories.length > 0) { %>
+            <% categories.forEach(category => { %>
+                <div class="category-card">
+                    <a href="/category/detail?genre=<%= category.mal_id %>">
+                        <a href="<%= category.url %>"><h3><%= category.name %></h3></a>
+                    </a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No categories available</p>
+        <% } %>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,22 @@
+{
+  "name": "freewanime",
+  "version": "1.0.0",
+  "description": "Free streaming anime and no ads",
+  "keywords": [
+    "FreeWanime"
+  ],
+  "license": "ISC",
+  "author": "Januar Dwiputra Warsito",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "active": "nodemon main.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}

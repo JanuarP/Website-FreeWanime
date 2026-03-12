@@ -1,0 +1,83 @@
+<%- include("partials/header.ejs") %>
+
+<style>
+    #listPopulerAnime {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    h2 {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .populerSection {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+        gap: 20px;
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    .anime-card {
+        width: 175px;
+        background: #1a1a1a;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .anime-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px #ffffff;
+    }
+
+    .info a {
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+
+    .anime-card img {
+        width: auto;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .info h3 {
+        padding: 15px;
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+        color: #ffffff;
+    }
+</style>
+
+<section id="listPopulerAnime">
+    <h2>Populer Anime List</h2>
+    <div class="populerSection">
+        <% if (animePopuler && animePopuler.length > 0) { %>
+            <% animePopuler.forEach(item => { %>
+                <% item.entry.forEach(anime => { %>
+                    <div class="anime-card">
+                        <img src="<%= anime.images.jpg.image_url %>" 
+                        alt="<%= anime.title %>">
+                        
+                        <div class="info">
+                            <h3>
+                                <a href="<%= anime.url %>/episode">
+                                    <%= anime.title %></a>
+                            </h3>
+                        </div>
+                    </div>
+                <% }); %>
+            <% }); %>
+        <% } else { %>
+            <p>No popular anime available</p>
+        <% } %>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
