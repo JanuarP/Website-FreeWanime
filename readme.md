@@ -1,16 +1,16 @@
-# Website FreeWanime
+# FreeWanime Website
 
-FreeWanime adalah platform pihak ketiga dengan tampilan website yang lebih menarik perhatian dan layout yang rapi, juga dibantu oleh Jikan API sebagai pihak yang menyediakan layanan nya untuk menonton anime dari berbagai genre
+FreeWanime is a third-party platform with a more attractive website appearance and a neat layout, also supported by Jikan API, which provides services for watching anime of various genres.
 
-# Fitur
+# Features
 1. Category
-   Berisi list berbagai genre Anime
+Contains a list of various anime genres
 
 2. Home
-   Untuk kembali ke halalaman utama
+To return to the main page
 
-3. Populer
-   Untuk menampilkan berbagai list anime populer
+3. Popular
+To display a list of various popular anime
 
 # Packages
 1. nodemon
@@ -18,5 +18,5 @@ FreeWanime adalah platform pihak ketiga dengan tampilan website yang lebih menar
 3. express
 4. axios
 
-# Cara install packages
+# How to install packages
    npm install / npm i
